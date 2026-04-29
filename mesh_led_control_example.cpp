@@ -20,6 +20,8 @@
 #include "ip6string.h"
 #include "mbed-trace/mbed_trace.h"
 
+#if MBED_CONF_APP_ENABLE_LED_CONTROL_EXAMPLE
+
 static void init_socket();
 static void handle_socket();
 static void receive();
@@ -215,3 +217,20 @@ static void init_socket()
     // dispatch forever
     queue.dispatch();
 }
+
+#else
+
+void start_mesh_led_control_example(NetworkInterface * interface)
+{
+    (void) interface;
+}
+
+void start_blinking()
+{
+}
+
+void cancel_blinking()
+{
+}
+
+#endif /* MBED_CONF_APP_ENABLE_LED_CONTROL_EXAMPLE */
