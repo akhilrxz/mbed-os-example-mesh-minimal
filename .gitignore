@@ -1,0 +1,26 @@
+# Build
+BUILD/
+TARGET_*/
+settings/
+
+# Logs / dumps
+*.log
+build_log*
+ielfdump*
+tmp_*
+
+# IDE / tools
+.vscode/
+.metadata/
+.claude/
+__pycache__/
+
+# Backup junk
+Backup*
+*.bak
+
+# Generated files
+*.ewd
+*.ewt
+*.ewp.bak*
+.ninja_log
